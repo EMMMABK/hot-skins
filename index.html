@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./icons/logo.svg" type="image/x-icon">
+    <title>HotSkins</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__left__container">
+                <div class="header__icons">
+                    <a href="./index.html"><img src="./icons/logo.svg" alt="icon"></a>
+                    <a href="./index.html"><h1 class="header__title"><span>Hot</span>Skins</h1></a>
+                </div>
+                <div class="header__rout">
+                    <ul class="header__ul">
+                        <li class="header__li">
+                            <a href="./html/help.html">Помощь</a>    
+                        </li>
+                        <li class="header__li">
+                            <a href="./html/contacts.html">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__right__container">
+                <button class="button__auth">Войти</button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="main__item item">
+            <div class="item__container container">
+                <h2 class="item__title">
+                    Принимайте платежи <br>
+                    от пользователей <br>
+                    с помощью скинов <br>
+                    CS:GO и DOTA 2
+                </h2>
+
+                <div class="overlay" id="overlay"></div>
+
+                <button class="item-connect__proj" id="connectButton">
+                    Подключить проект
+                </button>
+
+                <div class="modal" id="myModal">
+                    <div class="modal-content">
+                        <span class="close" id="closeModal">&times;</span>
+                        <div class="content__connect">
+                            <div class="img__logo">
+                                <img src="./images/connect.png" alt="">
+                            </div>
+                            <div class="form__for__connect">
+                                <h2 class="form__title">
+                                    Заявка на подключение   
+                                </h2>
+                                <form action="#">
+                                    <input class="name_form" type="text" placeholder="Ваше имя" required>
+                                    <input class="name_form" type="text" placeholder="Ваш email" required>
+                                    <input class="name_form" type="text" placeholder="Адрес сайта" required>
+                                    <textarea class="name_form_area" name="" id="" cols="30" rows="10" required placeholder="Ваши контакты (Телефон, Telegram, WhatsApp...)"></textarea>
+                                    <button class="request_send">Отправить заявку</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__left">
+                <p class="footer__title">
+                    Copyright © Skincash.ru
+                </p>
+            </div>
+            <div class="footer__right">
+                <ul class="footer__right__ul">
+                    <li class="footer__right__li"><a class="footer__title" href="./html/help.html">Помощь</a></li>
+                    <li class="footer__right__li"><a class="footer__title" href="./html/contacts.html">Контакты</a></li>
+                    <li class="footer__right__li"><a class="footer__title" href="./html/user.html">Пользовательское соглашение</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+</html>
