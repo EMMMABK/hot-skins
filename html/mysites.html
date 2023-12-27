@@ -1,0 +1,51 @@
+<header class="header">
+    <div class="header__container container">
+        <div class="header__left__container">
+            <div class="header__icons">
+                <a href="./index.html"><img src="./icons/logo.svg" alt="icon"></a>
+                <a href="./index.html"><h1 class="header__title"><span>Hot</span>Skins</h1></a>
+            </div>
+            <div class="header__rout">
+                <ul class="header__ul">
+                    <li class="header__li">
+                        <a href="./html/help.html">Помощь</a>    
+                    </li>
+                    <li class="header__li">
+                        <a href="./html/contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="overlay_auth" id="overlay_auth"></div>
+
+        <div class="header__right__container">
+            <button class="button__auth" id="button__auth">Войти</button>
+        </div>
+
+        <div class="modal_auth" id="myModal_auth">
+            <div class="modal-content_auth">
+                <span class="close_auth" id="closeModal_auth">&times;</span>
+                <div class="auth__window">
+                    <div class="logo__auth">
+                        <img src="./images/logoLogin.png" alt="">
+                        <h2 class="header__title">
+                            <span>Hot</span>Skins
+                        </h2>
+                    </div>
+                    <div class="auth__fields">
+                        <form id="login-form" action="#">
+                            <input type="email" required placeholder="Ваш email">
+                            <div class="password__field">
+                                <input id="passwordField" type="password" required placeholder="Пароль">
+                                <img src="./icons/Глазик.svg" id="togglePassword" alt="">
+                            </div>
+                            <button class="login_auth">Войти</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<script src="../js/database/login.js"></script>

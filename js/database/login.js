@@ -40,12 +40,34 @@ function updateUIOnLogin(user) {
     logoutButton.style.fontWeight = '400';
     logoutButton.style.lineHeight = '16px'
     logoutButton.style.color = '#FFFFFF'
+    logoutButton.style.cursor = 'pointer'
 
     logoutButton.addEventListener('click', logoutUser);
     let right_side = document.querySelector('.header__right__container')
     right_side.style.display = 'flex'
     right_side.style.alignItems = 'center'
     right_side.style.columnGap = '12px'
+
+    const mySitesLink = document.createElement('a');
+    mySitesLink.href = './html/mysites.html'; 
+    mySitesLink.textContent = 'Мои сайты';
+
+    const apiLink = document.createElement('a');
+    apiLink.href = './html/api.html';
+    apiLink.textContent = 'API';
+
+    const mySitesListItem = document.createElement('li');
+    mySitesListItem.classList.add('header__li');
+    mySitesListItem.appendChild(mySitesLink);
+
+    const apiListItem = document.createElement('li');
+    apiListItem.classList.add('header__li');
+    apiListItem.appendChild(apiLink);
+
+    const headerUl = document.querySelector('.header__ul');
+
+    headerUl.appendChild(mySitesListItem);
+    headerUl.appendChild(apiListItem);    
     right_side.appendChild(logoutButton);
 }
 
