@@ -148,41 +148,89 @@ body{
     background: #F4C038;
 }
 
-.overlay_auth {
+/* Модальное окно для кнопки Войти */
+.modal_auth{
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+.overlay_auth{
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный чёрный цвет */
-    z-index: 9999; /* Устанавливаем поверх остальных элементов */
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
 }
 
-/* Стили для модального окна */
-.modal_auth {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
+.overlay_auth.show_auth {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s linear;
+}
+
+.modal_auth.show_auth {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s linear;
+}
+
+
+.modal-content_auth {
+    background: #20222A;
+    margin: 15% auto;
     padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
     border-radius: 5px;
-    z-index: 10000; /* Устанавливаем поверх overlay и остальных элементов */
+    position: relative;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Стили для крестика закрытия */
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+
+.modal_auth.show_auth .modal-content_auth {
+    opacity: 1;
+    transform: translateY(0);
+    width: 90%;
+    max-width: 80%;
+}
+
+.close_auth {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close_auth:hover,
+.close_auth:focus {
+    color: black;
+    text-decoration: none;
     cursor: pointer;
-    font-size: 24px;
-    color: #888;
 }
 
 
+
+/* Конец */
 .modal {
     display: none;
     position: fixed;

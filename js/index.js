@@ -21,41 +21,25 @@ window.onclick = function(event) {
 };
 
 
-// Получаем элементы DOM
-const buttonAuth = document.getElementById('button__auth');
-const modalAuth = document.getElementById('myModal_auth');
-const closeModalAuth = document.getElementById('closeModal_auth');
-const overlayAuth = document.getElementById('overlay_auth');
 
-// Функция для отображения модального окна
-function openModal() {
-    modalAuth.style.display = 'block';
-    overlayAuth.style.display = 'block';
-}
+let modal_auth = document.getElementById("myModal_auth");
+let overlay_auth = document.getElementById("overlay_auth");
+let btn_auth = document.getElementById("button__auth");
+let span_auth = document.getElementById("closeModal_auth");
 
-// Функция для скрытия модального окна
-function closeModal() {
-    modalAuth.style.display = 'none';
-    overlayAuth.style.display = 'none';
-}
+btn_auth.onclick = function() {
+    modal_auth.classList.add("show_auth");
+    overlay_auth.classList.add("show_auth"); 
+};
 
-// Обработчик события для открытия модального окна при клике на кнопку "Войти"
-buttonAuth.addEventListener('click', openModal);
+span_auth.onclick = function() {
+    modal_auth.classList.remove("show_auth");
+    overlay_auth.classList.remove("show_auth"); 
+};
 
-// Обработчик события для закрытия модального окна при клике на крестик
-closeModalAuth.addEventListener('click', closeModal);
-
-// Обработчик события для закрытия модального окна при клике на задний фон (overlay)
-overlayAuth.addEventListener('click', function(event) {
-    if (event.target === overlayAuth) {
-        closeModal();
+window.onclick = function(event) {
+    if (event.target == overlay_auth) {
+        modal_auth.classList.remove("show_auth");
+        overlay_auth.classList.remove("show_auth"); 
     }
-});
-
-
-// Дополнительно можно добавить обработчик события для закрытия модального окна по нажатию клавиши Escape
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        closeModal();
-    }
-});
+};
