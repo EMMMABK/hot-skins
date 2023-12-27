@@ -45,14 +45,14 @@
                             </h2>
                         </div>
                         <div class="auth__fields">
-                            <form id="login-form" action="#">
-                                <input type="email" required placeholder="Ваш email">
-                                <div class="password__field">
-                                    <input id="passwordField" type="password" required placeholder="Пароль">
-                                    <img src="./icons/Глазик.svg" id="togglePassword" alt="">
-                                </div>
-                                <button class="login_auth">Войти</button>
-                            </form>
+                                <form id="login-form" action="#">
+                                    <input type="email" required placeholder="Ваш email">
+                                    <div class="password__field">
+                                        <input id="passwordField" type="password" required placeholder="Пароль">
+                                        <img src="./icons/Глазик.svg" id="togglePassword" alt="">
+                                    </div>
+                                    <button class="login_auth">Войти</button>
+                                </form>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,10 @@
                                 <form id="myForm" action="#">
                                     <input class="name_form" type="text" placeholder="Ваше имя" required>
                                     <input class="name_form" type="email" placeholder="Ваш email" required>
-                                    <input class="name_form" type="text" placeholder="Адрес сайта" required>
+                                    <div class="password__field">
+                                        <input id="passwordField_reg" type="password" required placeholder="Пароль">
+                                        <img src="./icons/Глазик.svg" id="togglePassword_reg" alt="">
+                                    </div>
                                     <textarea class="name_form_area" name="" id="" cols="30" rows="10" required placeholder="Ваши контакты (Телефон, Telegram, WhatsApp...)"></textarea>
                                     <button style="cursor: pointer;" class="request_send">Отправить заявку</button>
                                 </form>

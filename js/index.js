@@ -44,8 +44,10 @@ window.onclick = function(event) {
     }
 };
 
-const passwordField = document.getElementById('passwordField');
-const togglePassword = document.getElementById('togglePassword');
+let passwordField = document.getElementById('passwordField');
+let togglePassword = document.getElementById('togglePassword');
+let passwordField_reg  = document.getElementById('passwordField_reg')
+let togglePassword_reg = document.getElementById('togglePassword_reg');
 
 togglePassword.addEventListener('click', function() {
     if (passwordField.type === 'password') {
@@ -57,9 +59,26 @@ togglePassword.addEventListener('click', function() {
 
 passwordField.addEventListener('input', function() {
     const password = passwordField.value;
-    if (password.length < 8 || password.length > 8) {
+    if (password.length !== 8) {
         passwordField.setCustomValidity('Пароль должен содержать от 8 символов');
     } else {
         passwordField.setCustomValidity('');
+    }
+});
+
+togglePassword_reg.addEventListener('click', function() {
+    if (passwordField_reg.type === 'password') {
+        passwordField_reg.type = 'text';
+    } else {
+        passwordField_reg.type = 'password';
+    }
+});
+
+passwordField_reg.addEventListener('input', function() {
+    const password_reg = passwordField_reg.value;
+    if (password_reg.length !== 8) {
+        passwordField_reg.setCustomValidity('Пароль должен содержать от 8 символов');
+    } else {
+        passwordField_reg.setCustomValidity('');
     }
 });
