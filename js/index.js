@@ -43,3 +43,23 @@ window.onclick = function(event) {
         overlay_auth.classList.remove("show_auth"); 
     }
 };
+
+const passwordField = document.getElementById('passwordField');
+const togglePassword = document.getElementById('togglePassword');
+
+togglePassword.addEventListener('click', function() {
+    if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+    } else {
+        passwordField.type = 'password';
+    }
+});
+
+passwordField.addEventListener('input', function() {
+    const password = passwordField.value;
+    if (password.length < 8 || password.length > 8) {
+        passwordField.setCustomValidity('Пароль должен содержать от 8 символов');
+    } else {
+        passwordField.setCustomValidity('');
+    }
+});

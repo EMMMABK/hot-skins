@@ -154,7 +154,6 @@ body{
     position: fixed;
     z-index: 999;
     left: 0;
-    top: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
@@ -194,8 +193,8 @@ body{
 
 .modal-content_auth {
     background: #20222A;
-    margin: 15% auto;
-    padding: 20px;
+    margin: 5% auto;
+    padding: 30px;
     border: 1px solid #888;
     width: 80%;
     max-width: 600px;
@@ -228,6 +227,57 @@ body{
     cursor: pointer;
 }
 
+.auth__window{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 56px;
+}
+
+.logo__auth{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 22px;
+}
+#login-form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.password__field{
+    padding: 15px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.password__field > input{
+    border: none;
+    background: none;
+    color: white;
+}
+
+#login-form > input, .password__field{
+    width: 392px;
+    height: 48px;
+    border-radius: 24px;
+    border: 1px solid #3D4554;
+    background: none;
+    padding-left: 24px;
+    color: white;
+}
+
+.login_auth{
+    width: 392px;
+    height: 48px;
+    border-radius: 48px;
+    background: #F4C038;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
 
 
 /* Конец */
@@ -502,5 +552,17 @@ body{
 @media(max-width: 420px){
     .content__connect{
         width: 100%;
+    }
+}
+
+@media(max-width: 550px){
+    #login-form > input, .login_auth, .password__field{
+        width: 60%;
+    }
+}
+
+@media (max-width: 316px){
+    #togglePassword{
+        display: none;
     }
 }
