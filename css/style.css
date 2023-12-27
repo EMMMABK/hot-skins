@@ -235,7 +235,7 @@ body{
     background: #20222A;
 }
 
-.footer__title{
+.footer__title, .footer__title__left{
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
