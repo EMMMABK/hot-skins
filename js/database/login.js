@@ -19,7 +19,7 @@ function updateUIOnLogin(user) {
     greeting.innerHTML = `Привет, ${user.name}`;
             
     const userIcon = document.createElement('img');
-    userIcon.src = 'путь_к_иконке_пользователя';
+    userIcon.src = '';
 
     const loginButton = document.getElementById('button__auth');
     loginButton.replaceWith(userIcon, greeting);
@@ -51,6 +51,14 @@ function loginUser(event) {
     } else {
         alert('Нет зарегистрированных пользователей');
     }
+    const modal = document.getElementById('myModal_auth');
+    modal.style.display = 'none';
+
+    const overlay = document.querySelector('.overlay_auth');
+    overlay.style.display = 'none';
+
+    const showAuth = document.querySelector('.show_auth');
+    showAuth.style.display = 'none';
 }
 
 function logoutUser() {
