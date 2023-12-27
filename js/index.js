@@ -21,25 +21,41 @@ window.onclick = function(event) {
 };
 
 
-let modal_auth = document.getElementById("myModal_auth");
-let overlay_auth = document.getElementById("overlay_auth");
-let btn_auth = document.getElementById("button__auth");
-let span_auth = document.getElementById("closeModal_auth");
+// Получаем элементы DOM
+const buttonAuth = document.getElementById('button__auth');
+const modalAuth = document.getElementById('myModal_auth');
+const closeModalAuth = document.getElementById('closeModal_auth');
+const overlayAuth = document.getElementById('overlay_auth');
 
-btn_auth.onclick = function() {
-    modal_auth.classList.add("show");
-    overlay_auth.classList.add("show"); 
-};
+// Функция для отображения модального окна
+function openModal() {
+    modalAuth.style.display = 'block';
+    overlayAuth.style.display = 'block';
+}
 
-span_auth.onclick = function() {
-    modal_auth.classList.remove("show");
-    overlay_auth.classList.remove("show"); 
-};
+// Функция для скрытия модального окна
+function closeModal() {
+    modalAuth.style.display = 'none';
+    overlayAuth.style.display = 'none';
+}
 
-window.onclick = function(event) {
-    if (event.target == overlay_auth) {
-        modal_auth.classList.remove("show");
-        overlay_auth.classList.remove("show"); 
+// Обработчик события для открытия модального окна при клике на кнопку "Войти"
+buttonAuth.addEventListener('click', openModal);
+
+// Обработчик события для закрытия модального окна при клике на крестик
+closeModalAuth.addEventListener('click', closeModal);
+
+// Обработчик события для закрытия модального окна при клике на задний фон (overlay)
+overlayAuth.addEventListener('click', function(event) {
+    if (event.target === overlayAuth) {
+        closeModal();
     }
-};
+});
 
+
+// Дополнительно можно добавить обработчик события для закрытия модального окна по нажатию клавиши Escape
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
+});

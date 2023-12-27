@@ -148,18 +148,6 @@ body{
     background: #F4C038;
 }
 
-.modal_auth {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    z-index: 1000;
-}
-
 .overlay_auth {
     display: none;
     position: fixed;
@@ -167,13 +155,33 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный чёрный цвет */
+    z-index: 9999; /* Устанавливаем поверх остальных элементов */
 }
 
-.show {
-    display: block !important;
+/* Стили для модального окна */
+.modal_auth {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 10000; /* Устанавливаем поверх overlay и остальных элементов */
 }
+
+/* Стили для крестика закрытия */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #888;
+}
+
 
 .modal {
     display: none;
