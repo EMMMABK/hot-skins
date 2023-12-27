@@ -16,10 +16,14 @@ function checkLoggedInUser() {
 
 function updateUIOnLogin(user) {
     const greeting = document.createElement('div');
-    greeting.innerHTML = `Привет, ${user.name}`;
-            
+    greeting.innerHTML = `Привет, <br> <span style="color: #F4C038;">${user.name}</span>`;
+    greeting.style.fontSize = '14px';
+    greeting.style.fontWeight = '400';
+    greeting.style.lineHeight = '16px'
+    greeting.style.color = '#FFFFFF80';
+
     const userIcon = document.createElement('img');
-    userIcon.src = '';
+    userIcon.src = 'icons/Profile.svg'; 
 
     const loginButton = document.getElementById('button__auth');
     loginButton.replaceWith(userIcon, greeting);
@@ -27,8 +31,22 @@ function updateUIOnLogin(user) {
     const logoutButton = document.createElement('button');
     logoutButton.classList.add('button__logout');
     logoutButton.textContent = 'Выйти';
+    logoutButton.style.width = '96px';
+    logoutButton.style.height = '40px';
+    logoutButton.style.borderRadius = '20px';
+    logoutButton.style.border = '1px solid #3D4554';
+    logoutButton.style.background = 'none'
+    logoutButton.style.fontSize = '14px';
+    logoutButton.style.fontWeight = '400';
+    logoutButton.style.lineHeight = '16px'
+    logoutButton.style.color = '#FFFFFF'
+
     logoutButton.addEventListener('click', logoutUser);
-    document.querySelector('.header__right__container').appendChild(logoutButton);
+    let right_side = document.querySelector('.header__right__container')
+    right_side.style.display = 'flex'
+    right_side.style.alignItems = 'center'
+    right_side.style.columnGap = '12px'
+    right_side.appendChild(logoutButton);
 }
 
 function loginUser(event) {

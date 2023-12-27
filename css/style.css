@@ -566,3 +566,19 @@ body{
         display: none;
     }
 }
+
+@media (max-width: 430px){
+    .header__right__container > img{
+       display: none;
+    }
+    .header__right__container{
+        flex-direction: column;
+        row-gap: 10px;
+    }
+}
+
+@media (max-width: 315px){
+    .header__left__container{
+        column-gap: 0px;
+    }
+}
