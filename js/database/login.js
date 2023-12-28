@@ -15,60 +15,111 @@ function checkLoggedInUser() {
 }
 
 function updateUIOnLogin(user) {
+    const currentPage = window.location.pathname;
     const greeting = document.createElement('div');
     greeting.innerHTML = `Привет, <br> <span style="color: #F4C038;">${user.name}</span>`;
     greeting.style.fontSize = '14px';
     greeting.style.fontWeight = '400';
     greeting.style.lineHeight = '16px'
     greeting.style.color = '#FFFFFF80';
+    if (currentPage.includes('index.html')){
+        const userIcon = document.createElement('img');
+        userIcon.src = 'icons/Profile.svg'; 
 
-    const userIcon = document.createElement('img');
-    userIcon.src = 'icons/Profile.svg'; 
+        const loginButton = document.getElementById('button__auth');
+        loginButton.replaceWith(userIcon, greeting);
 
-    const loginButton = document.getElementById('button__auth');
-    loginButton.replaceWith(userIcon, greeting);
+        const logoutButton = document.createElement('button');
+        logoutButton.classList.add('button__logout');
+        logoutButton.textContent = 'Выйти';
+        logoutButton.style.width = '96px';
+        logoutButton.style.height = '40px';
+        logoutButton.style.borderRadius = '20px';
+        logoutButton.style.border = '1px solid #3D4554';
+        logoutButton.style.background = 'none'
+        logoutButton.style.fontSize = '14px';
+        logoutButton.style.fontWeight = '400';
+        logoutButton.style.lineHeight = '16px'
+        logoutButton.style.color = '#FFFFFF'
+        logoutButton.style.cursor = 'pointer'
 
-    const logoutButton = document.createElement('button');
-    logoutButton.classList.add('button__logout');
-    logoutButton.textContent = 'Выйти';
-    logoutButton.style.width = '96px';
-    logoutButton.style.height = '40px';
-    logoutButton.style.borderRadius = '20px';
-    logoutButton.style.border = '1px solid #3D4554';
-    logoutButton.style.background = 'none'
-    logoutButton.style.fontSize = '14px';
-    logoutButton.style.fontWeight = '400';
-    logoutButton.style.lineHeight = '16px'
-    logoutButton.style.color = '#FFFFFF'
-    logoutButton.style.cursor = 'pointer'
+        logoutButton.addEventListener('click', logoutUser);
+        let right_side = document.querySelector('.header__right__container')
+        right_side.style.display = 'flex'
+        right_side.style.alignItems = 'center'
+        right_side.style.columnGap = '12px'
 
-    logoutButton.addEventListener('click', logoutUser);
-    let right_side = document.querySelector('.header__right__container')
-    right_side.style.display = 'flex'
-    right_side.style.alignItems = 'center'
-    right_side.style.columnGap = '12px'
+        const mySitesLink = document.createElement('a');
+        mySitesLink.href = './html/mysites.html'; 
+        mySitesLink.textContent = 'Мои сайты';
 
-    const mySitesLink = document.createElement('a');
-    mySitesLink.href = './html/mysites.html'; 
-    mySitesLink.textContent = 'Мои сайты';
+        const apiLink = document.createElement('a');
+        apiLink.href = './html/api.html';
+        apiLink.textContent = 'API';
 
-    const apiLink = document.createElement('a');
-    apiLink.href = './html/api.html';
-    apiLink.textContent = 'API';
+        const mySitesListItem = document.createElement('li');
+        mySitesListItem.classList.add('header__li');
+        mySitesListItem.appendChild(mySitesLink);
 
-    const mySitesListItem = document.createElement('li');
-    mySitesListItem.classList.add('header__li');
-    mySitesListItem.appendChild(mySitesLink);
+        const apiListItem = document.createElement('li');
+        apiListItem.classList.add('header__li');
+        apiListItem.appendChild(apiLink);
 
-    const apiListItem = document.createElement('li');
-    apiListItem.classList.add('header__li');
-    apiListItem.appendChild(apiLink);
+        const headerUl = document.querySelector('.header__ul');
 
-    const headerUl = document.querySelector('.header__ul');
+        headerUl.appendChild(mySitesListItem);
+        headerUl.appendChild(apiListItem);    
+        right_side.appendChild(logoutButton);
+    }else{
+        const userIcon = document.createElement('img');
+        userIcon.src = '../icons/Profile.svg'; 
 
-    headerUl.appendChild(mySitesListItem);
-    headerUl.appendChild(apiListItem);    
-    right_side.appendChild(logoutButton);
+        const loginButton = document.getElementById('button__auth');
+        loginButton.replaceWith(userIcon, greeting);
+
+        const logoutButton = document.createElement('button');
+        logoutButton.classList.add('button__logout');
+        logoutButton.textContent = 'Выйти';
+        logoutButton.style.width = '96px';
+        logoutButton.style.height = '40px';
+        logoutButton.style.borderRadius = '20px';
+        logoutButton.style.border = '1px solid #3D4554';
+        logoutButton.style.background = 'none'
+        logoutButton.style.fontSize = '14px';
+        logoutButton.style.fontWeight = '400';
+        logoutButton.style.lineHeight = '16px'
+        logoutButton.style.color = '#FFFFFF'
+        logoutButton.style.cursor = 'pointer'
+
+        logoutButton.addEventListener('click', logoutUser);
+        let right_side = document.querySelector('.header__right__container')
+        right_side.style.display = 'flex'
+        right_side.style.alignItems = 'center'
+        right_side.style.columnGap = '12px'
+
+        const mySitesLink = document.createElement('a');
+        mySitesLink.href = '../html/mysites.html'; 
+        mySitesLink.textContent = 'Мои сайты';
+
+        const apiLink = document.createElement('a');
+        apiLink.href = '../html/api.html';
+        apiLink.textContent = 'API';
+        
+        const mySitesListItem = document.createElement('li');
+        mySitesListItem.classList.add('header__li');
+        mySitesListItem.appendChild(mySitesLink);
+
+        const apiListItem = document.createElement('li');
+        apiListItem.classList.add('header__li');
+        apiListItem.appendChild(apiLink);
+
+        const headerUl = document.querySelector('.header__ul');
+
+        headerUl.appendChild(mySitesListItem);
+        headerUl.appendChild(apiListItem);    
+        right_side.appendChild(logoutButton);
+    }
+    
 }
 
 function loginUser(event) {

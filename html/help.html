@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/help.css">
+    <link rel="shortcut icon" href="../icons/logo.svg" type="image/x-icon">
+    <title>HotSkins</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__left__container">
+                <div class="header__icons">
+                    <a href="../index.html"><img src="../icons/logo.svg" alt="icon"></a>
+                    <a href="../index.html"><h1 class="header__title"><span>Hot</span>Skins</h1></a>
+                </div>
+                <div class="header__rout">
+                    <ul class="header__ul">
+                        <li class="header__li">
+                            <a style="color: #F4C038" href="../html/help.html">Помощь</a>    
+                        </li>
+                        <li class="header__li">
+                            <a href="../html/contacts.html">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="overlay_auth" id="overlay_auth"></div>
+
+            <div class="header__right__container">
+                <button class="button__auth" id="button__auth">Войти</button>
+            </div>
+
+            <div class="modal_auth" id="myModal_auth">
+                <div class="modal-content_auth">
+                    <span class="close_auth" id="closeModal_auth">&times;</span>
+                    <div class="auth__window">
+                        <div class="logo__auth">
+                            <img src="../images/logoLogin.png" alt="">
+                            <h2 class="header__title">
+                                <span>Hot</span>Skins
+                            </h2>
+                        </div>
+                        <div class="auth__fields">
+                            <form id="login-form" action="#">
+                                <input type="email" required placeholder="Ваш email">
+                                <div class="password__field">
+                                    <input id="passwordField" type="password" required placeholder="Пароль">
+                                    <img src="./icons/Глазик.svg" id="togglePassword" alt="">
+                                </div>
+                                <button class="login_auth">Войти</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main__help-item help-item">
+        <section class="help-item__container container">
+            <h2 class="help-item__title">
+               Помощь 
+            </h2>
+            <a href="./about.html" class="help-item__link">
+                <div class="help-item__link-block">
+                    <img src="../icons/about.svg" alt="">
+                    <h2 class="help-item__link-block__title">
+                        О компании HotSkins
+                    </h2>
+                    <p class="help-item__link-block__title">
+                        3 статьи
+                    </p>
+                </div>
+            </a>
+            <a href="./link.html" class="help-item__link">
+                <div class="help-item__link-block">
+                    <img src="../icons/link.svg" alt="">
+                    <h2 class="help-item__link-block__title">
+                        Где найти ссылку на обмен
+                    </h2>
+                    <p class="help-item__link-block__title">
+                        3 статьи
+                    </p>
+                </div>
+            </a>
+            <a href="./refill.html" class="help-item__link">
+                <div class="help-item__link-block">
+                    <img src="../icons/refill.svg" alt="">
+                    <h2 class="help-item__link-block__title">
+                        Пополнение баланса
+                    </h2>
+                    <p class="help-item__link-block__title">
+                        5 статей
+                    </p>
+                </div>  
+            </a>
+            <a href="./connectproj.html" class="help-item__link">
+                <div class="help-item__link-block">
+                    <img src="../icons/connect.svg" alt="">
+                    <h2 class="help-item__link-block__title">
+                        Подключение своего проекта
+                    </h2>
+                    <p class="help-item__link-block__title">
+                        5 статей
+                    </p>
+                </div>
+            </a>
+            <a href="./problems.html" class="help-item__link">
+                <div class="help-item__link-block">
+                    <img src="../icons/problems.svg" alt="">
+                    <h2 class="help-item__link-block__title">
+                        Проблемы с обменом
+                    </h2>
+                    <p class="help-item__link-block__title">
+                        5 статей
+                    </p>
+                </div>
+            </a>
+            <a href="./secure.html" class="help-item__link">
+                <div class="help-item__link-block">
+                    <img src="../icons/secure.svg" alt="">
+                    <h2 class="help-item__link-block__title">
+                        Как обезопасить себя в сделках
+                    </h2>
+                    <p class="help-item__link-block__title">
+                        5 статей
+                    </p>
+                </div>
+            </a>
+            <a href="./analytic.html" class="help-item__link">
+                <div class="help-item__link-block">
+                    <img src="../icons/analytic.svg" alt="">
+                    <h2 class="help-item__link-block__title">
+                        Аналитика и отчетность
+                    </h2>
+                    <p class="help-item__link-block__title">
+                        3 статей
+                    </p>
+                </div>
+            </a>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__left">
+                <p class="footer__title__left">
+                    Copyright © Skincash.ru
+                </p>
+            </div>
+            <div class="footer__right">
+                <ul class="footer__right__ul">
+                    <li class="footer__right__li"><a class="footer__title" href="../html/help.html">Помощь</a></li>
+                    <li class="footer__right__li"><a class="footer__title" href="../html/contacts.html">Контакты</a></li>
+                    <li class="footer__right__li"><a class="footer__title" href="../html/user.html">Пользовательское соглашение</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/index.js"></script>
+    <script src="../js/database/reg.js"></script>
+    <script src="../js/database/login.js"></script>
+</body>
+</html>
