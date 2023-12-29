@@ -62,6 +62,18 @@ function loadSites() {
 
 document.addEventListener('DOMContentLoaded', function() {
     loadSites();
+    
+    const allSitesBlocks = document.querySelector('.all-sites-blocks');
+
+    allSitesBlocks.addEventListener('click', function(event) {
+        if (event.target.classList.contains('more')) {
+            const siteBlock = event.target.closest('.site-block');
+            if (siteBlock) {
+                siteBlock.remove();
+                saveSites();
+            }
+        }
+    });
 });
 
 function getRandomNumber() {
@@ -71,8 +83,3 @@ function getRandomNumber() {
 document.getElementById('addButton').addEventListener('click', function() {
     addSite();
 });
-
-
-
-
-
