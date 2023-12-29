@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/link.css">
+    <link rel="shortcut icon" href="../icons/logo.svg" type="image/x-icon">
+    <title>HotSkins</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__left__container">
+                <div class="header__icons">
+                    <a href="../index.html"><img src="../icons/logo.svg" alt="icon"></a>
+                    <a href="../index.html"><h1 class="header__title"><span>Hot</span>Skins</h1></a>
+                </div>
+                <div class="header__rout">
+                    <ul class="header__ul">
+                        <li class="header__li">
+                            <a  href="../html/help.html">Помощь</a>    
+                        </li>
+                        <li class="header__li">
+                            <a  href="../html/contacts.html">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="overlay_auth" id="overlay_auth"></div>
+
+            <div class="header__right__container">
+                <button class="button__auth" id="button__auth">Войти</button>
+            </div>
+
+            <div class="modal_auth" id="myModal_auth">
+                <div class="modal-content_auth">
+                    <span class="close_auth" id="closeModal_auth">&times;</span>
+                    <div class="auth__window">
+                        <div class="logo__auth">
+                            <img src="../images/logoLogin.png" alt="">
+                            <h2 class="header__title">
+                                <span>Hot</span>Skins
+                            </h2>
+                        </div>
+                        <div class="auth__fields">
+                            <form id="login-form" action="#">
+                                <input type="email" required placeholder="Ваш email">
+                                <div class="password__field">
+                                    <input id="passwordField" type="password" required placeholder="Пароль">
+                                    <img src="./icons/Глазик.svg" id="togglePassword" alt="">
+                                </div>
+                                <button class="login_auth">Войти</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main__link-item link-item">
+        <section class="link-item__container container">
+            <h2 class="link-item__title">
+                API
+            </h2>
+            <div class="link-item__main_part">
+                <div class="link-item__left">
+                    <p class="link-item__left__subtitle-sel">Основная информация</p>
+                    <a href="./api2.html" style="color: #FFFFFF80;" class="link-item__left__subtitle">Генерация подписи</a>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Создание заказа</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Получение информации о <br> заказе через callback</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Проверка статуса заказа</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Получение списка <br> депозитов</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Получение баланса на <br> сайте</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Получение валют и курсов</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Статус сервера</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Получение недошедших <br> callback</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Маркет: прайс-лист</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Маркет: поиск</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Маркет: купить скин</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Маркет: получить <br> информацию</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Маркет: история</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Маркет: WebSockets</p>
+                </div>
+                <div class="link-item__right">
+                    <h2 class="link-item__right__title">
+                        Основная информация по API
+                    </h2>
+                    <p class="link-item__right__subtitle">
+                        CarPlay давно устанавливается в большинство новых машин. Многие водители привыкли к этой системе, ведь она открывает доступ к Apple Music и удобному навигатору на экране автомобиля.
+                        <br>
+                        <br>
+                        К сожалению, автопроизводители часто устанавливают проводную версию CarPlay, поэтому пользователям приходится каждый раз подключать iPhone к автомобилю по проводу <span>Генерация подписи</span>.
+                    </p>
+                    <h3 class="link-item__right__title_one">
+                        Чтобы начать работать с API  SkinCash необходимо следующее
+                    </h3>
+                    <div class="link-item-givenum">
+                        <div class="link-item-givenum-st">
+                            <img src="../icons/1.svg" alt="">
+                            <p class="link-item-givenum--text">
+                                Carlinkit — это компактный адаптер, который позволяет получить беспроводной
+                            </p>
+                        </div>
+                        <div class="link-item-givenum-st">
+                            <img src="../icons/2.svg" alt="">
+                            <p class="link-item-givenum--text">
+                                CarPlay практически в любой машине. Среди поддерживаемых марок есть Audi
+                            </p>
+                        </div>
+                        <div class="link-item-givenum-st">
+                            <img src="../icons/3.svg" alt="">
+                            <p class="link-item-givenum--text">Устройство подключается в стандартный выход USB-A в автомобиле. Затем iPhone подключается к Carlinkit с помощью Wi-Fi для запуска CarPlay.</p>
+                        </div>
+                        <div class="link-item-givenum-st">
+                            <img src="../icons/4.svg" alt="">
+                            <p class="link-item-givenum--text">Важно: беспроводной CarPlay будет работать только в том случае, если машина поддерживает проводной.</p>
+                        </div>
+                    </div>
+                    <h3 class="link-item__right__title_one">
+                        Принцип взаимодействия через API SkinCash
+                    </h3>
+                    <div class="link-item-givenum">
+                        <div class="link-item-givenum-st">
+                            <img src="../icons/1.svg" alt="">
+                            <p class="link-item-givenum--text">
+                                Carlinkit — это компактный адаптер, который позволяет получить беспроводной
+                            </p>
+                        </div>
+                        <div class="link-item-givenum-st">
+                            <img src="../icons/2.svg" alt="">
+                            <p class="link-item-givenum--text">
+                                CarPlay практически в любой машине. Среди поддерживаемых марок есть Audi
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__left">
+                <p class="footer__title__left">
+                    Copyright © Skincash.ru
+                </p>
+            </div>
+            <div class="footer__right">
+                <ul class="footer__right__ul">
+                    <li class="footer__right__li"><a class="footer__title" href="../html/help.html">Помощь</a></li>
+                    <li class="footer__right__li"><a class="footer__title" href="../html/contacts.html">Контакты</a></li>
+                    <li class="footer__right__li"><a class="footer__title" href="../html/user.html">Пользовательское соглашение</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/index.js"></script>
+    <script src="../js/database/reg.js"></script>
+    <script src="../js/database/login.js"></script>
+</body>
+</html>

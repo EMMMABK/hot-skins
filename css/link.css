@@ -72,6 +72,31 @@
     line-height: 22px;
     color: #FFFFFF;
 }
+.link-item__right__subtitle > span{
+    color: #F4C038;
+}
+.link-item__right__title_one{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    color: white;
+}
+.link-item-givenum-st{
+    display: flex;
+    column-gap: 16px;
+}
+.link-item-givenum{
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+}
+
+.link-item-givenum--text{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #FFFFFF;
+}
 
 @media (max-width: 900px){
     .link-item__main_part{
