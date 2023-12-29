@@ -135,3 +135,16 @@
 .options {
     display: none;
 }
+
+@media (max-width: 931px){
+    .site__prices{
+        flex-wrap: wrap;
+    }
+    .site__add{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .all-sites-blocks{
+        flex-wrap: wrap;
+    }
+}
