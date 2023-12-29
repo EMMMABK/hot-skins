@@ -1,0 +1,134 @@
+.site__item{
+    width: 100%;
+    background: #272E3B;
+    margin-top: 10px;
+}
+.site-item-container{
+    padding-top: 48px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+.site__prices{
+    display: flex;
+    column-gap: 119px;
+}
+.current-price{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+.site__title{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: white;
+}
+.current-price__title{
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 48px;
+    color: white;
+}
+.current-price__subtitle{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #FFFFFF80;
+}
+/* 2 section */
+.site__item-add__container{
+    padding-top: 40px;
+}
+.site__add-title{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.site__add{
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+    padding-bottom: 40px;
+}
+.site__add > input{
+    width: 392px;
+    height: 48px;
+    border-radius: 24px;
+    background: none;
+    border: 1px solid #3D4554;
+    padding-left: 24px;
+    color: white;
+}
+.btn__add{
+    width: 191px;
+    height: 48px;
+    border-radius: 48px;
+    background: #425170;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #FFFFFF80;
+}
+.site-block{
+    width: 288px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0px 8px 24px -4px #18274B14;
+    box-shadow: 0px 6px 12px -6px #18274B1F;
+    background: #272E3B;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 48px;
+}
+.all-sites-blocks{
+    display: flex;
+    column-gap: 24px;
+    padding-bottom: 192px;
+}
+.more{
+    padding-bottom: 188px;
+}
+.site-block-text-price{
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 40px;
+    color: white;
+}
+.site-block-text{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+.site-block-text-title{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.site-block-text-subtitle{
+    color: #FFFFFF80;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+.withdraw{
+    width: 240px;
+    height: 48px;
+    border-radius: 48px;
+    background: #F4C038;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #20222A;
+}
+.withdraw > span{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+}
