@@ -72,3 +72,26 @@
     line-height: 22px;
     color: #FFFFFF;
 }
+
+@media (max-width: 900px){
+    .link-item__main_part{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}
+
+@media (max-width: 846px) {
+    .link-item__right {
+        max-width: 280px;
+        width: 100%;
+    }
+
+    .link-item__right img {
+        max-width: 100%; 
+        height: auto; 
+    }
+
+    .link-item__right__subtitle {
+        font-size: 14px; 
+    }
+}
