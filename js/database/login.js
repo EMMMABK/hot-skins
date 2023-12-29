@@ -71,7 +71,7 @@ function updateUIOnLogin(user) {
         headerUl.appendChild(apiListItem);    
         right_side.appendChild(logoutButton);
 
-    }else if(currentPage.includes('api.html')){
+    }else if(currentPage.includes('api.html') || currentPage.includes('api2.html')){
         const userIcon = document.createElement('img');
         userIcon.src = '../icons/Profile.svg'; 
 

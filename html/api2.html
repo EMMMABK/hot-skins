@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/link.css">
+    <link rel="shortcut icon" href="../icons/logo.svg" type="image/x-icon">
+    <title>HotSkins</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__left__container">
+                <div class="header__icons">
+                    <a href="../index.html"><img src="../icons/logo.svg" alt="icon"></a>
+                    <a href="../index.html"><h1 class="header__title"><span>Hot</span>Skins</h1></a>
+                </div>
+                <div class="header__rout">
+                    <ul class="header__ul">
+                        <li class="header__li">
+                            <a  href="../html/help.html">Помощь</a>    
+                        </li>
+                        <li class="header__li">
+                            <a  href="../html/contacts.html">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="overlay_auth" id="overlay_auth"></div>
+
+            <div class="header__right__container">
+                <button class="button__auth" id="button__auth">Войти</button>
+            </div>
+
+            <div class="modal_auth" id="myModal_auth">
+                <div class="modal-content_auth">
+                    <span class="close_auth" id="closeModal_auth">&times;</span>
+                    <div class="auth__window">
+                        <div class="logo__auth">
+                            <img src="../images/logoLogin.png" alt="">
+                            <h2 class="header__title">
+                                <span>Hot</span>Skins
+                            </h2>
+                        </div>
+                        <div class="auth__fields">
+                            <form id="login-form" action="#">
+                                <input type="email" required placeholder="Ваш email">
+                                <div class="password__field">
+                                    <input id="passwordField" type="password" required placeholder="Пароль">
+                                    <img src="./icons/Глазик.svg" id="togglePassword" alt="">
+                                </div>
+                                <button class="login_auth">Войти</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main__link-item link-item">
+        <section class="link-item__container container">
+            <h2 class="link-item__title">
+                API
+            </h2>
+            <div class="link-item__main_part">
+                <div class="link-item__left">
+                    <a style="color: #FFFFFF80;" href="./api.html" class="link-item__left__subtitle">Основная информация</a>
+                    <p class="link-item__left__subtitle-sel" style="color: #FFFFFF;" >Генерация подписи</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Создание заказа</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Получение информации о <br> заказе через callback</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Проверка статуса заказа</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Получение списка <br> депозитов</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Получение баланса на <br> сайте</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Получение валют и курсов</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Статус сервера</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Получение недошедших <br> callback</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Маркет: прайс-лист</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Маркет: поиск</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Маркет: купить скин</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Маркет: получить <br> информацию</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Маркет: история</p>
+                    <p style="color: #FFFFFF80;" class="link-item__left__subtitle">Маркет: WebSockets</p>
+                </div>
+                <div class="link-item__right">
+                    <h2 class="link-item__right__title">
+                        Создание подписки
+                    </h2>
+                    <p class="link-item__right__subtitle">
+                        CarPlay давно устанавливается в большинство новых машин. Многие водители привыкли к этой системе, ведь она открывает доступ к Apple Music и удобному навигатору на экране автомобиля.
+                    </p>
+                    <h3 class="link-item__right__title_one">
+                        Пример на PHP
+                    </h3>
+                    <img src="../images/code1.png" alt="">
+                    <h3 class="link-item__right__title_one">
+                        Пример на JS
+                    </h3>
+                    <img src="../images/code2.png" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__left">
+                <p class="footer__title__left">
+                    Copyright © Skincash.ru
+                </p>
+            </div>
+            <div class="footer__right">
+                <ul class="footer__right__ul">
+                    <li class="footer__right__li"><a class="footer__title" href="../html/help.html">Помощь</a></li>
+                    <li class="footer__right__li"><a class="footer__title" href="../html/contacts.html">Контакты</a></li>
+                    <li class="footer__right__li"><a class="footer__title" href="../html/user.html">Пользовательское соглашение</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/index.js"></script>
+    <script src="../js/database/reg.js"></script>
+    <script src="../js/database/login.js"></script>
+</body>
+</html>
