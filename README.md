@@ -18,6 +18,15 @@ But hold onto your seat, for within this repository lies a world waiting to be d
 
 ---
 
+## Screenshots:
+
+![hotskins](./assets/hotskins1.png)
+![hotskins](./assets/hotskins2.png)
+![hotskins](./assets/hotskins3.png)
+![hotskins](./assets/hotskins4.png)
+![hotskins](./assets/hotskins5.png)
+![hotskins](./assets/hotskins6.png)
+
 ## Unveiling Features: Crafted for Your Adventure 🛠️
 
 ### Adding Sites & Interactive Marvel 🌐
